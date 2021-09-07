@@ -52,6 +52,7 @@ p {
 
 .certificates {
     background: var(--page-one);
+    order: 1;
 }
 
 .certificate-wrapper-heading {
@@ -78,6 +79,7 @@ p {
 
 .about-me {
     background: var(--page-two);
+    order: 2;
 }
 
 .about-wrapper,
@@ -177,6 +179,12 @@ p {
     .projects,
     .resume {
         width: 100%;
+    }
+    .certificates {
+        order: 2;
+    }
+    .about-me {
+        order: 1;
     }
     .photo {
         width: 250px;
