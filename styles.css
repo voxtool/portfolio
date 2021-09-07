@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.15.1/css/all.css');
+
+:root {
+    --page-one: transparent;
+    --page-two: transparent;
+    --page-three: transparent;
+    --page-four: transparent;
+    --page-five: transparent;
+    --page-six: transparent;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+    line-height: 1.5;
+    background: url('./images/ep_naturalblack.png') repeat fixed;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.block {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.certificates,
+.about-me,
+.resume {
+    width: 50%;
+    padding: 0 16px;
+    height: 700px;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    opacity: 0.9;
+}
+
+p {
+    opacity: 0.6;
+}
+
+.certificates {
+    background: var(--page-one);
+}
+
+.certificate-wrapper-heading {
+    padding: 64px 0 32px 0;
+}
+
+.certificate-wrapper {
+    padding: 32px 0;
+}
+
+.certificate-link {
+    padding: 16px 0;
+    display: block;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    opacity: 0.6;
+}
+
+.certificate-link:hover {
+    background: teal;
+    opacity: 0.9;
+}
+
+.about-me {
+    background: var(--page-two);
+}
+
+.about-wrapper,
+.projects-wrapper,
+.resume-wrapper {
+    padding: 64px 0;
+    text-align: center;
+}
+
+.photo {
+    margin: 16px 0;
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid teal;
+}
+
+.about-me-content {
+    text-align: left;
+    padding: 12px 24px;
+}
+
+.fab,
+.fas {
+    padding: 32px 16px;
+    color: teal;
+}
+
+.fab:hover,
+.fas:hover {
+ transform: scale(1.1);
+}
+
+.projects {
+    min-height: 500px;
+    width: 50%;
+    padding: 0 16px;
+    text-align: center;
+    color: white;
+}
+
+.projects:nth-of-type(1) {
+    background: var(--page-three);
+}
+
+.projects:nth-of-type(2) {
+    background: var(--page-four);
+}
+
+.block:nth-of-type(3) > .projects {
+    background: var(--page-five);
+}
+
+.project-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 4px solid teal;
+    border-radius: 6px;
+}
+
+.project-info {
+    padding: 32px 0;
+}
+
+.resume {
+    padding: 0 16px;
+    background: var(--page-six);
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.resume-wrapper > p:first-of-type {
+    opacity: 0.6;
+}
+
+.resume-download {
+    background-color: teal;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    align-self: center;
+    text-decoration: none;
+}
+
+.resume-download:hover {
+    transform: scale(1.1);
+}
+
+@media all and (max-width: 900px) {
+    .certificates,
+    .about-me,
+    .projects,
+    .resume {
+        width: 100%;
+    }
+    .photo {
+        width: 250px;
+        height: 250px;
+    }
+}
